@@ -1,6 +1,6 @@
 package com.example.db.books.dto;
 
-public class Book {
+public class BookDTO {
     private Long id;
     private String title;
 
@@ -12,7 +12,7 @@ public class Book {
 //        return title;
 //    }
 
-    public Book(Long id, String title) {
+    public BookDTO(Long id, String title) {
         this.id = id;
         this.title = title;
     }
