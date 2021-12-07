@@ -4,6 +4,9 @@ import com.example.db.books.entity.Book;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.Optional;
+
 
 @Repository
 public class BookRepositoryImpl implements BookCustomRepository {
@@ -22,5 +25,17 @@ public class BookRepositoryImpl implements BookCustomRepository {
             throw new RuntimeException();
         }
         return savedBook;
+    }
+
+    public List<Book> findAllBooks(){
+       return bookJpaRepository.findAll();
+    }
+
+    public Optional<Book> findBookById(Long id){
+        return bookJpaRepository.findById(id);
+    }
+
+    public void deleteBookById(Long id){
+
     }
 }
